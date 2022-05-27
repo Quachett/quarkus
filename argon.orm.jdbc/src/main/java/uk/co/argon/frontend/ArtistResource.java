@@ -12,7 +12,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import uk.co.argon.backend.ArtistFacade;
-import uk.co.argon.cdm.Artist;
+import uk.co.argon.cdm.orm.Artist;
 
 @Path("/artist")
 @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})

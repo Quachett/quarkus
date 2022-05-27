@@ -7,7 +7,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 import uk.co.argon.backend.dao.ArtistFacadeDao;
-import uk.co.argon.cdm.Artist;
+import uk.co.argon.cdm.orm.Artist;
 
 @ApplicationScoped
 public class ArtistFacadeBean implements ArtistFacade {

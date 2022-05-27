@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 
-import uk.co.argon.cdm.Artist;
+import uk.co.argon.cdm.orm.Artist;
 
 @ApplicationScoped
 public interface ArtistFacade {

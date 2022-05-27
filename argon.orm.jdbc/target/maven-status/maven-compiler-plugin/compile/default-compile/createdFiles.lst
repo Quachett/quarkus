@@ -1,0 +1,7 @@
+uk\co\argon\backend\dao\ArtistFacadeDao.class
+META-INF\panache-archive.marker
+uk\co\argon\backend\test\ArtistTest.class
+uk\co\argon\backend\ArtistFacadeBean.class
+uk\co\argon\backend\dao\ArtistFacadeDaoBean.class
+uk\co\argon\frontend\ArtistResource.class
+uk\co\argon\backend\ArtistFacade.class

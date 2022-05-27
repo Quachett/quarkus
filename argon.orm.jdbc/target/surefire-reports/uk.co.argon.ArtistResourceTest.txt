@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: uk.co.argon.ArtistResourceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.902 s <<< FAILURE! - in uk.co.argon.ArtistResourceTest
+uk.co.argon.ArtistResourceTest.testHelloEndpoint  Time elapsed: 3.543 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <405>.
+
+	at uk.co.argon.ArtistResourceTest.testHelloEndpoint(ArtistResourceTest.java:17)
+

@@ -15,23 +15,23 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.Iterables;
-import com.owlike.genson.Genson;
-import com.owlike.genson.GensonBuilder;
-import com.owlike.genson.ext.jaxb.JAXBBundle;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import uk.co.inc.argon.commons.exceptions.HttpException;
 
 
 public class CommonsUtil {
-	private static final Genson genson = new GensonBuilder().withBundle(new JAXBBundle()).setSkipNull(true).create();
-	private static final String DATE_FORMAT = "dd-MMM-yyy";
-    public static final String ADD_CLAIM_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss";
+    public static final String ISO_8601_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
     public static final String DOT = ".";
     public static final String COMMA = ",";
     public static final String PIPE = "||";
     public static final String NEW = "NEW";
     public static final String YES = "Yes";
     public static final String NO = "No";
+	private static final Gson gson = new GsonBuilder()
+			.setDateFormat(ISO_8601_DATE_FORMAT)
+			.setPrettyPrinting().create();
 	
     public static String createAttributes(List<String> attributes) {
         //return attributes.stream().collect(Collectors.joining(SynapseConstants.COMMA));
@@ -97,16 +97,8 @@ public class CommonsUtil {
 		
 		return t;
 	}
-    
-    public static <T> T checkGensonNull(String str, Class c) {
-        return str != null?(T)genson.deserialize(str,c):null;
-    }
-    
-    public static <T> String getSerialisedObj(T t) {
-    	return genson.serialize(t);
-    }
 
-	public static Genson getGenson() {
-		return genson;
+	public static Gson getGson() {
+		return gson;
 	}
 }
